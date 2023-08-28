@@ -17,6 +17,10 @@ int main(){
             }
         }
 
+        if (bool) {
+            printf("%d\n", n);
+        }
+
         n += 2;
     }
     
