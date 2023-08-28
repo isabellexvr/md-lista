@@ -7,7 +7,7 @@ int main(){
     double z;
 
     printf("2\n");
-    while (n < 50) {
+    while (1) {
         bool = 1;
 
         for (int i = 3; i * i <= n; i += 2) {
