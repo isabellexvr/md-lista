@@ -17,22 +17,34 @@ int isPrime(int n){
     return bool;
 }
 
-int main(){
-    int i, number;
-    scanf("%d", &number);
-
-    for(i=number;i>=2;i--){
-        if(i%2==0){
-            continue;
-        }else{
-            if(isPrime(i)){
-                if(number%i==0){
-                    printf("%d\n", i);
-                }
-            }
-        }
+int getNextPrime(int n){
+    int newPrime = n + 1;
+    while (!isPrime(newPrime)){
+        newPrime ++;
     }
 
+    return newPrime;
+}
+
+int main(){
+    int number, candidatePrime = 2;
+    scanf("%d", &number);
+
+    while (number >= 1 && candidatePrime <= number){
+        if(!isPrime(candidatePrime)){
+            candidatePrime ++;
+            continue;
+        }
+
+        if(number % candidatePrime == 0){
+            printf("%d\n", candidatePrime);
+            number = number / candidatePrime;
+            continue;
+        }else{
+            candidatePrime = getNextPrime(candidatePrime);
+            continue;
+        }
+    }
     
     return 0;
 }
