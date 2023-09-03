@@ -122,11 +122,6 @@ int main() {
         
         answer = answer % M;
         
-        printf("Essas sao as %d congruencias:\n", n);
-        for(int i=0;i<n;i++){
-            printf("Congruencia %d: X ≡ %d mod %d\n", i+1, b[i], m[i]);
-        }
-        
         printf("O valor de X eh: %d\n", answer);
     }
     
