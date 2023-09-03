@@ -1,30 +1,13 @@
-#include <stdio.h>
-#include <math.h>
+#include <stdio.h> 
+int main() { 
+    int resto, n1, n2; 
+    scanf("%d%d", &n1, &n2); 
 
-int main()
-{
-    int bool, f, n;
-
-    scanf("%d", &n);
-
-    bool = 1;
-
-    if(n < 2){
-        bool = 0;
-    }
-
-    for (int i = 3; i * i <= n; i += 2) {
-        if(n % i == 0){
-            bool = 0;
-            break;
-        }
-    }
-
-    if(bool){
-        printf("É primo\n");
-    }else{
-        printf("Não é primo\n");
-    }
-    
+    while(n2!=0){ 
+        resto = n1%n2; 
+        n1 = n2; 
+        n2 = resto; 
+    } 
+    printf("%d\n", n1); 
     return 0;
 }

@@ -1,30 +1,38 @@
 #include <stdio.h>
-#include <math.h>
+
+int extendMDC(int n1, int n2, int resto, int *addressA, int *addressB){
+    int a=1, b=0, quociente, candidateS, s, t, mdc;
+    
+    *addressA = n1;
+    *addressB = n2;
+    
+    while( (n2!=0) && (n1 % n2 != 0) ){
+        resto = n1 % n2;
+        quociente = n1 / n2;
+        candidateS = a - (b * quociente);
+        a = b;
+        b = candidateS;
+        n1 = n2; 
+        n2 = resto; 
+    }
+    
+    s = candidateS;
+    mdc = n2;
+    
+    t = (mdc - (*addressA * s) ) / *addressB;
+    
+    printf("Valor de s: %d\n", s);
+    printf("Valor de t: %d\n", t);
+    
+    return candidateS;
+}
 
 int main()
 {
-    int bool, f, n;
-
-    scanf("%d", &n);
-
-    bool = 1;
-
-    if(n < 2){
-        bool = 0;
-    }
-
-    for (int i = 3; i * i <= n; i += 2) {
-        if(n % i == 0){
-            bool = 0;
-            break;
-        }
-    }
-
-    if(bool){
-        printf("É primo\n");
-    }else{
-        printf("Não é primo\n");
-    }
+    int numero1, numero2;
+    scanf("%d%d", &numero1, &numero2);
+    
+    extendMDC(numero1, numero2, 0, &numero1, &numero2);
     
     return 0;
 }
