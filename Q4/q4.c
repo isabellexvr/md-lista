@@ -63,6 +63,9 @@ int fator(int x, int y, int *addressA, int *addressB){
 
 int main(){
     int valorA, valorB;
+    printf("Questão 4: Determinar o mdc e o mdc de dois inteiros com base em seus fatores primos.\n");
+    printf("Insira os dois números:\n");
+
     scanf("%d%d", &valorA, &valorB);
 
 

@@ -20,6 +20,12 @@ int extendMDC(int n1, int n2, int resto, int *addressA, int *addressB){
     mdc = n2;
     
     t = (mdc - (*addressA * s) ) / *addressB;
+
+    if(s < 0){
+        s += *addressB;
+    }else if(s >= *addressB){
+        s = s % *addressB;
+    }
     
     return s;
 }
@@ -39,8 +45,14 @@ int congruencia(int A, int B, int M, int numberOfSolutions){
     int solutions, s, addressA = A, addressB = B, x, solution;
     
     s = extendMDC(A,M,0, &addressA, &addressB);
+    printf("A: %d, M: %d\n", A, M);
+    printf("s: %d\n", s);
     
     x = B * s;
+
+    if(x > M){
+        x = x % M;
+    }
     
     if(numberOfSolutions == 1){
         solution = (x + M*0);
@@ -70,7 +82,8 @@ int congruencia(int A, int B, int M, int numberOfSolutions){
 int main()
 {
     int a, b, m, d;
-    
+    printf("Questão 8: encontrar a solução de uma congruência linear.\n");
+    printf("Insira os inteiros a, b e m da congruência linear:\n");
     scanf("%d%d%d", &a, &b, &m);
     
     d = mdc(a,m,0);
