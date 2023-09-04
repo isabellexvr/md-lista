@@ -25,6 +25,7 @@ int main(){
 
         n += 2;
     }
+    printf("O último primo em 60 segundos foi %d\n", n);
     
     return 0;
 }

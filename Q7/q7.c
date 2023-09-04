@@ -35,6 +35,9 @@ int extendMDC(int n1, int n2, int resto, int *addressA, int *addressB){
 int main()
 {
     int numero1, numero2;
+    printf("Questão 7: Encontrar o inverso de a mod b.\n");
+    printf("Insira os inteiros a e b:\n");
+
     scanf("%d%d", &numero1, &numero2);
     
     extendMDC(numero1, numero2, 0, &numero1, &numero2);

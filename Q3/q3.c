@@ -28,6 +28,8 @@ int getNextPrime(int n){
 
 int main(){
     int number, candidatePrime = 2;
+    printf("Questão 3: Decompor um número inteiro em fatores primos.\n");
+    printf("Insira o número a ser decomposto: \n");
     scanf("%d", &number);
 
     while (number >= 1 && candidatePrime <= number){

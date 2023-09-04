@@ -30,6 +30,9 @@ int extendMDC(int n1, int n2, int resto, int *addressA, int *addressB){
 int main()
 {
     int numero1, numero2;
+    printf("Questão 6: Encontrar os coeficientes s e t da combinação linear.\n");
+    printf("Insira os dois números inteiros, a e b, da combinação linear:\n");
+
     scanf("%d%d", &numero1, &numero2);
     
     extendMDC(numero1, numero2, 0, &numero1, &numero2);

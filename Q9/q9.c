@@ -66,9 +66,9 @@ int main() {
     int n = 3, mdcCandidato, answer = 0, flag=1;
     
     int m[n], b[n], a[n], M = 1, Mn[n], sArr[n];
-    
+    printf("Questão 9: Encontrar a solução única de três congruências utilizando o teorema chinês do resto.\n");
     for( int i = 0 ; i < n ; i++ ){
-        printf("Valores de a, b e m para a congruencia %d:\n", i + 1);
+        printf("Insira os valores de a, b e m para a congruencia %d:\n", i + 1);
         scanf("%d %d %d", &a[i], &b[i], &m[i]);
         if(a[i] != 1){
             //verificar se a e m sao primos entre si

@@ -64,7 +64,7 @@ int euclides(int A, int D){
 
 int main() { 
     int n, mdcCandidato, answer = 0, flag=1;
-    
+    printf("Questão 10: Encontrar a solução única de n congruências utilizando o teorema chinês do resto.\n");
     printf("Quantas congruências lineares serão? \n");
     scanf("%d", &n);
     

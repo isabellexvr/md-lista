@@ -4,7 +4,8 @@
 int main()
 {
     int bool, f, n;
-
+    printf("Questão 1: Determinar se dado número é primo ou não.\n");
+    printf("Insira o número:\n");
     scanf("%d", &n);
 
     bool = 1;

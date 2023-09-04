@@ -82,7 +82,8 @@ int congruencia(int A, int B, int M, int numberOfSolutions){
 int main()
 {
     int a, b, m, d;
-    
+    printf("Questão 8: encontrar a solução de uma congruência linear.\n");
+    printf("Insira os inteiros a, b e m da congruência linear:\n");
     scanf("%d%d%d", &a, &b, &m);
     
     d = mdc(a,m,0);
